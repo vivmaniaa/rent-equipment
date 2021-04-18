@@ -1,5 +1,7 @@
 .breadcrumb-main{
     margin: 1em 0;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 .breadcrumb-main span.bread-link{

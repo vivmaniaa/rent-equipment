@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Branch, Category, Location } from 'src/app/commonInterface';
+import { Branch, Breadcrumb, Category, Location } from 'src/app/commonInterface';
 import * as data from '../../catalog.json';
 
 
@@ -13,6 +13,7 @@ export class CategoryComponent implements OnInit {
   jsonData:any = data;
   categories: Category[] = [];
   currentBranch: string ='';
+  breadcrumb: Breadcrumb[] = [{title: "Equipment catelog"}]
 
 
   constructor(private _route: ActivatedRoute, private _router: Router) { }
