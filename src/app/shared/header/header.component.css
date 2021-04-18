@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+mat-toolbar{
+    padding: 2.5em 1em;
+}  
+
+.logo-text{
+    color: #fff;
+    font-size: 2em;
+    font-family: Roboto, 'san-sarif';
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing:.08em;
+    cursor: pointer;
+    
+}
+
+.location_menu{
+    color: #fff;
+
+}
+.right-section{
+    flex: 1;
+}
+
+.mat-menu-item-submenu-trigger::after{
+    border-style: none;
+}

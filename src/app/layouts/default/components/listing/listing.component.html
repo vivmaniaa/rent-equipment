@@ -1,0 +1,14 @@
+<div class="category-main">
+    <app-breadcrumb [data]="breadcrumb"></app-breadcrumb>
+    <div class="category-list" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <mat-card class="category-card" fxLayout="column" fxLayoutGap="20px" *ngFor="let category of data">
+            <img [src]="imagePrefix+category.image" [alt]="category.name">
+            <ng-container *ngIf="navLink" >
+                <button class="navLink" [routerLink]="[navPrefix, paramOne, category.name] "   mat-raised-button color="primary">{{category.name}}</button>
+            </ng-container>
+            <ng-container *ngIf="!navLink">
+                <button mat-raised-button color="primary" [disableRipple]="true">{{category.name}}</button>
+            </ng-container>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+.breadcrumb-main{
+    margin: 1em 0;
+}
+
+.breadcrumb-main span.bread-link{
+    cursor: pointer;
+}

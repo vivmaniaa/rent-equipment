@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <span class="logo-text" [routerLink]="['/']" routerLinkActive="router-link-active" >Rental management system</span>
+    <span class="example-spacer"></span>
+    <div class="right-section">
+        <span class="location_menu"  [matMenuTriggerFor]="locationMenu">Select locations</span>
+        <mat-menu #locationMenu="matMenu">
+            <ng-container *ngFor="let location of locations">
+                <button mat-menu-item [matMenuTriggerFor]="sub_menu">{{ location.name }}</button>
+                <mat-menu #sub_menu="matMenu">
+                    <button *ngFor="let branch of location.branches" mat-menu-item [routerLink]="['/category', branch.branch_id]" routerLinkActive="router-link-active" >{{ branch.name }}</button>
+                </mat-menu>
+            </ng-container>
+        </mat-menu>
+    </div>
+  </mat-toolbar>
